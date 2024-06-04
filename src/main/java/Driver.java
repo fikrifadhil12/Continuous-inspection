@@ -9,17 +9,10 @@ public class Driver {
     public static void main(String[] args) {
         // TODO code application logic here
         ArrayList<Email> emails = new ArrayList<>();
-        
-        // Variabel yang tidak digunakan
-        int unusedVariable = 0;
 
         emails.add(new Email(1, "Fikri", "Nama saya Fikri", "Saya dari Bandung", LocalDate.now(), true));
         emails.add(new Email(2, "Adul", "Nama saya Adul", "Saya dari Perwakarta", LocalDate.now(), false));
         emails.add(new Email(3, "Raput", "Nama saya Raput", "Saya dari Jakarta", LocalDate.now(), true));
-
-        // Nama variabel yang tidak jelas
-        String a = "Some unnecessary string";
-        System.out.println(a);
 
         System.out.println("All Emails:");
         emails.forEach((email) -> {
@@ -30,14 +23,6 @@ public class Driver {
         emails.stream().filter((email) -> (email.isStarred())).forEachOrdered((email) -> {
             email.display();
         });
-
-        // Blok try-catch yang tidak melakukan apa-apa
-        try {
-            // TODO: Tambahkan logika penanganan pengecualian yang benar di sini
-            int result = 10 / 0;
-        } catch (Exception e) {
-            // Penanganan pengecualian kosong
-        }
     }
 }
 
